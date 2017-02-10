@@ -5,4 +5,8 @@ $(document).ready(function(){
         controlNav: false
     });
 
+    $('#burger').on('click', function(){
+        $(this).closest('header.main').find('.dropdown').addClass('active');
+    });
+
 });
