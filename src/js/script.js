@@ -6,7 +6,8 @@ $(document).ready(function(){
     });
 
     $('#burger').on('click', function(){
-        $(this).closest('header.main').find('.dropdown').addClass('active');
+        $(this).closest('header.main').toggleClass('active');
+        //$('header.main').find('.dropdown').slideUp(500);
     });
 
 });

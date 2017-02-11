@@ -68,7 +68,6 @@ header.main #burger {
 	height: 41px;
 	background-color: #FFF;
 	float: right;
-	margin-right: 25px;
 	position: relative;
 	display: none;
 	cursor: pointer;
@@ -85,6 +84,8 @@ header.main #burger .line {
 	width: 25px;
 	height: 3px;
 	margin: auto;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
 header.main #burger .line:before {
@@ -96,6 +97,8 @@ header.main #burger .line:before {
 	height: 3px;
 	background: #333;
 	border-radius: 4px;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
 header.main #burger .line:after {
@@ -107,13 +110,14 @@ header.main #burger .line:after {
 	height: 3px;
 	background: #333;
 	border-radius: 4px;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
 header.main .dropdown {
 	display: none;
 	width: 400px;
 	height: 400px;
-	background-color: grey;
 	position: absolute;
 	top: 101px;
 	right: 0;
@@ -121,10 +125,7 @@ header.main .dropdown {
 
 header.main .dropdown ul li {
 	border-bottom: 1px solid #3E3D3F;
-}
-
-header.main .dropdown ul li:last-child {
-	border-bottom: none;
+	position: relative;
 }
 
 header.main .dropdown ul li a {
@@ -136,10 +137,80 @@ header.main .dropdown ul li a {
 	font-family: 'Montserrat', sans-serif;
 	color: #FFF;
 	background: rgba(51, 51, 51, 0.98);
+	text-decoration: none;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
-header.main .dropdown.active {
+header.main .dropdown ul li a:hover {
+	color: #8d81ac;
+}
+
+header.main .dropdown ul li.active a {
+	color: #858585;
+}
+
+header.main .dropdown ul li.active:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 4px;
+	height: 35px;
+	background-color: #8d81ac;
+}
+
+header.main .dropdown .drop-info {
+	background: rgba(51, 51, 51, 0.98);
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+header.main .dropdown .drop-info .title {
+	text-align: left;
+	color: #9a9a9a;
 	display: block;
+	font-size: 1.8em;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 20px;
+}
+
+header.main .dropdown .drop-info .social-contacts li {
+	display: inline-block;
+	border-bottom: none;
+	margin-right: 20px;
+}
+
+header.main .dropdown .drop-info .social-contacts li a {
+	padding: 0;
+	line-height: normal;
+}
+
+header.main .dropdown .drop-info .social-contacts li a .fa {
+	font-size: 2em;
+}
+
+header.main.active .dropdown {
+	display: block;
+}
+
+header.main.active #burger .line {
+	background-color: #FFF;
+}
+
+header.main.active #burger .line:before {
+	width: 100%;
+	top: 0;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+header.main.active #burger .line:after {
+	top: 0;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
 section {
@@ -807,6 +878,14 @@ section.icons .right-side {
 	width: 100%;
 }
 
+section.icons .right-side {
+	padding-left: 0;
+}
+
+section.icons .right-side h2 {
+	text-align: center;
+}
+
 section.columns .col {
 	margin-bottom: 50px;
 }
@@ -835,12 +914,108 @@ section.subscribe form input {
 	width: 260px;
 }
 
+section.main .text-box h2 {
+	font-size: 4.4em;
+}
+
+footer.main .col ul {
+	margin-bottom: 20px;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
 
 section.grid .item {
 	width: 100%;
+}
+
+.content,
+section.grid .text-light {
+	width: 100%;
+}
+
+section.testimonials .image-box {
+	width: 100%;
+}
+
+section.testimonials .caption {
+	width: 70%;
+}
+
+}
+
+@media only screen and (max-width: 479px) {
+
+header.main .dropdown {
+	width: 100%;
+}
+
+section.notebook {
+	min-height: 400px;
+}
+
+section.notebook .text-box {
+	padding: 20px 0;
+}
+
+section.notebook .text-box h1 {
+	font-size: 5.4em;
+}
+
+section.notebook .text-box .info {
+	background: rgba(255, 255, 255, 0.3);
+	color: #BEBCC3;
+}
+
+section.notebook .bg-img {
+	top: 200px;
+}
+
+section.subscribe form {
+	width: 100%;
+}
+
+section.subscribe .btn {
+	display: block;
+	text-align: center;
+	width: 260px;
+	float: none;
+	margin: 0 auto 15px;
+}
+
+section.subscribe .form-group {
+	float: none;
+	margin: 0 auto;
+	text-align: center;
+}
+
+section.grid .price-item {
+	width: 260px;
+}
+
+section.grid h2 {
+	font-size: 3.2em;
+}
+
+section.grid .price-item.recommended {
+	width: 290px;
+}
+
+section.main .social img {
+	max-width: 100%;
+}
+
+section.main .text-box h2 {
+	font-size: 2.8em;
+}
+
+section.testimonials .caption p {
+	font-size: 1.5em;
+}
+
+section.testimonials .flexslider {
+	margin-bottom: 10px;
 }
 
 }
