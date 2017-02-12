@@ -11,6 +11,10 @@ body {
 	position: relative;
 }
 
+button {
+	outline: none;
+}
+
 h1,
 h2,
 h3,
@@ -439,6 +443,12 @@ section.testimonials .social-list li .btn {
 	box-sizing: border-box;
 }
 
+section.testimonials .social-list li .btn .fa {
+	font-size: 1.3em;
+	float: left;
+	margin-top: 5px;
+}
+
 section.testimonials .social-list li .btn-grey {
 	color: #000;
 	background-color: #f3f3f3;
@@ -677,7 +687,7 @@ section.subscribe .btn {
 }
 
 section.columns {
-	padding: 60px 0;
+	padding: 60px 0 40px;
 }
 
 section.columns .col {

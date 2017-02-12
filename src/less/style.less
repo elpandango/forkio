@@ -16,7 +16,9 @@ body {
   padding: 0 15px;
   position: relative;
 }
-
+button {
+  outline: none;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
@@ -391,6 +393,11 @@ section.testimonials {
       transition: .3s;
       text-decoration: none;
       box-sizing: border-box;
+      .fa {
+        font-size: 1.3em;
+        float: left;
+        margin-top: 5px;
+      }
     }
     .btn-grey {
       color: #000;
@@ -608,7 +615,7 @@ section.subscribe {
 }
 
 section.columns {
-  padding: 60px 0;
+  padding: 60px 0 40px;
   .col {
     float: left;
     width: 33.33%;
